@@ -9,10 +9,11 @@ import {
   Label,
 } from 'reactstrap';
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
 
 function App() {
 
-  // States
+  // Variables
   const [maxResults, setMaxResults] = useState(10);
   const [startIndex, setStartIndex] = useState(1);
   const [query, setQuery] = useState('');
@@ -27,6 +28,8 @@ function App() {
 
           // Mostrar resultados
 
+
+
         })
         .catch(err => {
           console.log(err.response);
@@ -37,12 +40,13 @@ function App() {
   const mainHeader = () => {
     return (
       <div>
+
         <h1> Google Books </h1>
         <div>
           
           <InputGroup>
             <Input/>
-              <Button>                            // Poner onClick = buscar
+              <Button onClick={requestQuery}>                            
                 <i>Buscar</i>
               </Button>
           </InputGroup>
@@ -50,24 +54,39 @@ function App() {
           <div>
             <FormGroup>
               <Label>Max Results</Label>
-              <Input/>
+              <Input
+              id='maxResults'
+              type='number'
+              value={maxResults}
+              onChange={e => setMaxResults(e.target.value)}
+              />
             </FormGroup>
 
             <FormGroup>
               <Label>Start Index</Label>
-              <Input/>
+              <Input
+              id='startIndex'
+              type='number'
+              value={startIndex}
+              onChange={e => setStartIndex(e.target.value)}
+              />
             </FormGroup>
           </div>
 
         </div>
       </div>
+
     );
   };
 
   // Return app
   return (
     <div>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
     {mainHeader()}
+
     </div>
   );
 }
