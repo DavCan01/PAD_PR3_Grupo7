@@ -26,11 +26,11 @@ function App() {
     } else {
       axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}&maxResults=${maxResults}&startIndex=${startIndex}`).then(res => {
 
-          // Mostrar resultados
+        // Mostrar resultados
 
 
 
-        })
+      })
         .catch(err => {
           console.log(err.response);
         });
@@ -39,40 +39,47 @@ function App() {
 
   const mainHeader = () => {
     return (
-      <div>
-
-        <h1> Google Books </h1>
-        <div>
-          
-          <InputGroup>
-            <Input/>
-              <Button onClick={requestQuery}>                            
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <h1> Google Books </h1>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+          <div class="col-auto">
+            <InputGroup>
+              <Input />
+              <Button onClick={requestQuery}>
                 <i>Buscar</i>
               </Button>
-          </InputGroup>
-
-          <div>
+            </InputGroup>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-3">
+          <div class="col-auto">
             <FormGroup>
               <Label>Max Results</Label>
               <Input
-              id='maxResults'
-              type='number'
-              value={maxResults}
-              onChange={e => setMaxResults(e.target.value)}
-              />
-            </FormGroup>
-
-            <FormGroup>
-              <Label>Start Index</Label>
-              <Input
-              id='startIndex'
-              type='number'
-              value={startIndex}
-              onChange={e => setStartIndex(e.target.value)}
+                id='maxResults'
+                type='number'
+                value={maxResults}
+                onChange={e => setMaxResults(e.target.value)}
               />
             </FormGroup>
           </div>
-
+        </div>
+        <div class="row justify-content-center mt-3">
+          <div class="col-auto">
+            <FormGroup>
+              <Label>Start Index</Label>
+              <Input
+                id='startIndex'
+                type='number'
+                value={startIndex}
+                onChange={e => setStartIndex(e.target.value)}
+              />
+            </FormGroup>
+          </div>
         </div>
       </div>
 
@@ -82,10 +89,10 @@ function App() {
   // Return app
   return (
     <div>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"></link>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"></link>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
-    {mainHeader()}
+      {mainHeader()}
 
     </div>
   );
