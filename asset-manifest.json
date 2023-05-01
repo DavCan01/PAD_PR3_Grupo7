@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/googlebooksclientpwa/static/css/main.e6c13ad2.css",
+    "main.js": "/googlebooksclientpwa/static/js/main.daf2516f.js",
+    "static/js/787.28af2f41.chunk.js": "/googlebooksclientpwa/static/js/787.28af2f41.chunk.js",
+    "index.html": "/googlebooksclientpwa/index.html",
+    "main.e6c13ad2.css.map": "/googlebooksclientpwa/static/css/main.e6c13ad2.css.map",
+    "main.daf2516f.js.map": "/googlebooksclientpwa/static/js/main.daf2516f.js.map",
+    "787.28af2f41.chunk.js.map": "/googlebooksclientpwa/static/js/787.28af2f41.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.daf2516f.js"
+  ]
+}
