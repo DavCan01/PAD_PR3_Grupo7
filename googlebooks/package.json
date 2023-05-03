@@ -1,6 +1,6 @@
 {
-  "homepage": "https://DavCan01.github.io/PAD_PR3_Grupo7",
-  "name": "googlebooksclientpwa",
+  "homepage": "https://davcan01.github.io/GoogleBooksPWA",
+  "name": "googlebooks",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,22 +8,31 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.4.0",
-    "bootstrap": "^5.2.3",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
-    "react-toastify": "^9.1.2",
+    "react-scripts": "5.0.1",
     "reactstrap": "^9.1.9",
-    "toast": "^0.5.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "workbox-background-sync": "^6.5.4",
+    "workbox-broadcast-update": "^6.5.4",
+    "workbox-cacheable-response": "^6.5.4",
+    "workbox-core": "^6.5.4",
+    "workbox-expiration": "^6.5.4",
+    "workbox-google-analytics": "^6.5.4",
+    "workbox-navigation-preload": "^6.5.4",
+    "workbox-precaching": "^6.5.4",
+    "workbox-range-requests": "^6.5.4",
+    "workbox-routing": "^6.5.4",
+    "workbox-strategies": "^6.5.4",
+    "workbox-streams": "^6.5.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "predeploy":"npm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -43,8 +52,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "workbox-cli": "^6.5.4"
   }
 }
