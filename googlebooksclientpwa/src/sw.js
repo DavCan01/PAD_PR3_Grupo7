@@ -12,21 +12,11 @@ import {precacheAndRoute as workbox_precaching_precacheAndRoute} from 'E:/Github
  * See https://goo.gl/2aRDsh
  */
 
-
-
-
-
-
-
-
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
   }
 });
-
-
-
 
 /**
  * The precacheAndRoute() method efficiently caches and responds to
