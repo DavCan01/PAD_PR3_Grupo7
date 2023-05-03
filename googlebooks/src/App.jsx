@@ -29,6 +29,9 @@ function App() {
         console.log(res.data.items);
         setCards(res.data.items);
 
+        // Guardar valores en localStorage
+        localStorage.setItem('lastQuery', query);
+        localStorage.setItem('lastMaxResults', maxResults);
       })
         .catch(err => {
           console.log(err.response);
@@ -38,6 +41,10 @@ function App() {
 
   const mainHeader = () => {
     
+     // Recuperar valores de localStorage
+    const lastQuery = localStorage.getItem('lastQuery') || '';
+    const lastMaxResults = localStorage.getItem('lastMaxResults') || 10;
+
     return (
       <div className="container">
         <div className="row mt-5">
@@ -50,7 +57,7 @@ function App() {
             <InputGroup>
               <Input 
               placeholder = "Inserta un título"
-              value = {query}
+              value = {query || lastQuery} // Utilizar valor guardado en localStorage si no hay valor actual
               onChange = {a => setQuery(a.target.value)}
               />
               <Button onClick={requestQuery}>
@@ -67,7 +74,7 @@ function App() {
                 max='40'
                 id='maxResults'
                 type='number'
-                value={maxResults}
+                value={maxResults || lastMaxResults} // Utilizar valor guardado en localStorage si no hay valor actual
                 onChange={e => setMaxResults(e.target.value)}
               />
             </FormGroup>
